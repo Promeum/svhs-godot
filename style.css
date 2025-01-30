@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+:root {
+  --svhs-green: #122508;
+  --svhs-gold: #fcb529;
+  --godot-primary: #363d52;
+  --godot-secondary: #212532;
+}
+
+html {
+  scroll-snap-type: none;
+}
+
+body {
+  text-align: -webkit-center;
+  background-color: #0a1403;
+  overflow-x: hidden;
+}
+
+#topNav {
+  display: block;
+  align-content: center;
+  background: linear-gradient(0.27turn, var(--svhs-green), #042618 12.5%, #0f1f06 31.4%, #2340089e 57.5%, #8f9d002b 85.3%, var(--svhs-green) 106%, var(--svhs-green));
+  border-bottom: 3px solid var(--svhs-gold);
+  font-weight: 350;
+  color: var(--svhs-gold);
+  text-align: center;
+  font-size: 5rem;
+  text-wrap: auto;
+  line-height: 1.09em;
+  padding-inline: 0.8em;
+  padding-bottom: 0.27em;
+  padding-top: 0.12em;
+}
+
+#topNavGamingTab {
+  height: max-content;
+  display: block;
+  align-content: center;
+  background: linear-gradient(0.27turn, var(--svhs-green), #042618 12.5%, #0f1f06 31.4%, #2340089e 57.5%, #8f9d002b 85.3%, var(--svhs-green) 106%, var(--svhs-green));
+  border-bottom: 3px solid var(--svhs-gold);
+  font-weight: 350;
+  color: var(--svhs-gold);
+  text-align: center;
+  font-size: 1.5rem;
+  text-wrap: auto;
+  line-height: 1.09em;
+  padding-inline: 0.8em;
+  padding-bottom: 0.27em;
+  padding-top: 0.12em;
+}
+
+#mainNav {
+  height: 48px;
+  position: sticky;
+  align-content: end;
+  overflow-x: auto;
+  overflow-y: hidden;
+  transform: rotate(180deg);
+}
+
+#homeText {
+  margin-left: auto;
+  color: #dcdcdc;
+}
+
+#homeText:hover {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+#awayText {
+
+}
+
+nav {
+  top: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  font-family: 'Oswald', sans-serif;
+  text-wrap: nowrap;
+  scroll-snap-align: start;
+}
+
+#currentPage {
+  background-color: #dcdcdc;
+}
+
+@keyframes navButton {
+  from {}
+
+  to {
+    transform: translate(0px, 8px);
+  }
+}
+
+main {
+  height: calc(100vh - 25px - 40px);
+  margin: 0%;
+  display: flex;
+}
+
+main * {
+  flex: auto;
+}
+
+.godotUnit {
+  display: flex;
+  width: 80%;
+  padding: 0.8em;
+  padding-inline: 1.6rem;
+  background: var(--godot-primary);
+  border: .5em solid var(--godot-secondary);
+  border-radius: 1.45em;
+  font: 1em 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.godotUnit * {
+  color: white;
+  text-align: left;
+}
+
+.godotUnitText {
+  width: 40%;
+  margin-bottom: 1rem;
+  margin-inline-end: 1rem;
+}
+
+.godotUnitText * {
+  margin-bottom: 0.5em;
+}
+
+.godotUnit h1 {
+  width: fit-content;
+  font-family: 'Trebuchet MS';
+  line-height: 4rem;
+}
+
+.godotUnit p {
+  width: fit-content;
+  white-space: break-spaces;
+  font-weight: normal;
+}
+
+.godotUnitImg {
+  max-width: 33rem;
+}
+
+noscript {
+  display: block;
+  width: 100%;
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  background-color: crimson;
+  padding-block: 0.5em;
+}
+
+.spacer {
+  visibility: hidden;
+}
+
+hr {
+  background-color: var(--svhs-gold);
+  overflow: hidden;
+  height: 4px;
+  border: none;
+  margin: unset;
+}
+
+footer {
+  display: inline-flex;
+  height: 25px;
+  background-color: var(--svhs-green);
+  align-items: center;
+  padding-inline: 10px;
+  justify-content: space-between;
+  width: 100vw;
+  position: fixed;
+  transform: translateX(-50%);
+  bottom: 0px;
+  border-bottom: 3px solid var(--svhs-gold);
+  color: #dcdcdc;
+}
+
+footer p {
+  font-family: 'Trebuchet MS', sans-serif;
+  text-wrap: nowrap;
+  flex: none;
+}
+
+.qr-button {
+  border-radius: 0px;
+  border-width: 0px;
+  background-color: var(--svhs-green) !important;
+  color: white;
+  bottom: 0px;
+}
+
+.qr-button:hover .qr-button:focus {
+  border-width: 10px;
+  outline-width: 10px;
+  background-color: red;
+}
+
+.qr-button::selection {
+  background: greenyellow;
+  fill: plum;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
