@@ -8,7 +8,7 @@ function initialize() {
   window.addEventListener("resize", function(e) {
     if (checkOverflowY(document.getElementsByTagName("html")[0])) {
       window.addEventListener("scroll", function(e) { // scroll if user not past title bar
-        document.documentElement.style.scrollSnapType = window.scrollY < this.window.innerHeight ? "y proximity" : "none";
+        document.documentElement.style.scrollSnapType = window.scrollY < document.getElementById('topNav').scrollHeight ? "y mandatory" : "none";
       });
     } else {
       this.window.removeEventListener("resize", function(e){});
@@ -17,22 +17,8 @@ function initialize() {
   });
 
   window.dispatchEvent(new Event("resize"), false, false, true);
-
-  // center the navbar
-  // var nav = document.getElementById("mainNav");
-  // nav.scrollTo({
-  //   left: ((nav.scrollWidth-nav.clientWidth)/2)
-  // });
   
-  // scroll the tableWrappers so it is not weird
-  var wrappers = document.getElementsByClassName("tableWrapper");
-  for (var i=0; i<wrappers.length; i++) {
-    var wrapper = wrappers[i];
-    var table = wrapper.getElementsByTagName("table")[0];
-    wrapper.scrollTo({
-      left: ( 2+Math.min(parseInt(getComputedStyle(table).paddingLeft.replace("px",""))+parseInt(getComputedStyle(table).borderLeftWidth.replace("px","")), (wrapper.scrollWidth-wrapper.clientWidth)/2) )
-    });
-  }
+
 
   console.log("init finished");
 }
@@ -52,7 +38,11 @@ function checkOverflowY(el) {
  */
 function initializeGamingTab() {
   gameFrame = document.getElementsByTagName('iframe')[0];
-  gameName = "Maximum-Lazer"
+  gameName = new URLSearchParams(window.location.search).get('game')
+
+  if (['Maximum-Lazer'].includes(gameName)) {
+    document.getElementById('awayText').innerHTML = gameName.replace('-', ' ');
+  }
 
   gameFrame.setAttribute('src', `godot-games/${gameName}/${gameName}.html`)
   document.title = `${gameName.replace('-', ' ')} - SVHS Godot Portfolio`

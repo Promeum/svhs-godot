@@ -2181,6 +2181,9 @@
 :root {
   --svhs-green: #122508;
   --svhs-gold: #fcb529;
+  --godot-logo-blue: #478cbf;
+  --godot-logo-black: #3f3e40;
+  --godot-logo-white: #f7f7f7;
   --godot-primary: #363d52;
   --godot-secondary: #212532;
 }
@@ -2191,6 +2194,11 @@ body {
   text-align: -webkit-center;
   background-color: #0a1403;
   overflow-x: hidden;
+}
+main {
+  height: calc(100vh - 25px - 40px);
+  display: flex;
+  scroll-snap-align: start;
 }
 #topNav {
   display: block;
@@ -2239,8 +2247,6 @@ body {
   text-decoration: none;
   font-weight: 400;
 }
-#awayText {
-}
 nav {
   top: 0px;
   box-sizing: border-box;
@@ -2258,11 +2264,6 @@ nav {
   to {
     transform: translate(0px, 8px);
   }
-}
-main {
-  height: calc(100vh - 25px - 40px);
-  margin: 0%;
-  display: flex;
 }
 main * {
   flex: auto;
@@ -2291,22 +2292,86 @@ main * {
   margin-inline-end: 1rem;
 }
 .godotUnitText * {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 .godotUnit h1 {
   width: fit-content;
+  margin-bottom: 0rem;
   font-family: 'Trebuchet MS';
   font-size: 4rem;
   line-height: 4rem;
+  overflow-wrap: anywhere;
 }
 .godotUnit p {
   width: fit-content;
   white-space: break-spaces;
   font-weight: normal;
 }
-.godotUnitImg {
+.godotUnitAuthors {
+  font-size: 1.5rem;
+}
+.godotUnitDesc {
+  font-size: 1.125rem;
+}
+.godotUnitRight {
+  display: block;
+  text-align: center;
+  align-content: center;
+  place-self: end;
+  /* min-width: fit-content; */
+  width: fit-content;
   max-width: 33rem;
   min-width: 0%;
+  max-height: fit-content;
+  align-self: center;
+}
+.playButton {
+  display: inline-block;
+  width: -webkit-fill-available;
+  align-content: center;
+  margin-block-start: .5rem;
+  padding-block: .1rem;
+  bottom: 0px;
+  border: .125em solid var(--godot-secondary);
+  border-radius: 0.45rem;
+  background-color: var(--godot-logo-blue);
+  color: white;
+  text-align: center;
+  font-family: 'Trebuchet MS';
+  font-size: 2rem;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+}
+.playButton:hover {
+  text-decoration: none;
+  background-color: var(--godot-primary);
+  /* animation-name: playButtonHover;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both; */
+  text-shadow: 0% 0% var(--godot-logo-white) 10px;
+}
+@keyframes playButtonHover {
+  from {
+  }
+  to {
+    text-shadow: var(--godot-logo-white) 0 0 10px;
+  }
+}
+.godotUnitImg {
+  width: 33rem;
+  min-width: 0%;
+  max-height: fit-content;
+  align-self: center;
+  background: var(--godot-primary);
+  border: .5em solid var(--godot-secondary);
+  border-radius: 1rem;
+  background-color: var(--svhs-green) !important;
+}
+iframe h1 {
+  color: white !important;
 }
 noscript {
   display: block;

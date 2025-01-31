@@ -3,6 +3,9 @@
 :root {
   --svhs-green: #122508;
   --svhs-gold: #fcb529;
+  --godot-logo-blue: #478cbf;
+  --godot-logo-black: #3f3e40;
+  --godot-logo-white: #f7f7f7;
   --godot-primary: #363d52;
   --godot-secondary: #212532;
 }
@@ -124,19 +127,15 @@ main * {
   text-align: left;
 }
 
-.godotUnitText {
-  width: 40%;
-  margin-bottom: 1rem;
-  margin-inline-end: 1rem;
-}
-
 .godotUnitText * {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 .godotUnit h1 {
   width: fit-content;
+  margin-bottom: 0rem;
   font-family: 'Trebuchet MS';
+  font-size: 4rem;
   line-height: 4rem;
 }
 
@@ -146,8 +145,23 @@ main * {
   font-weight: normal;
 }
 
+.godotUnitAuthors {
+  font-size: 1.5rem;
+}
+
+.godotUnitDesc {
+  font-size: 1.125rem;
+}
+
+.godotUnitRight {
+  display: contents;
+}
+
 .godotUnitImg {
   max-width: 33rem;
+  min-width: 0%;
+  max-height: fit-content;
+  align-self: center;
 }
 
 noscript {
