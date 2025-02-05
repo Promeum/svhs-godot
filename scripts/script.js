@@ -40,8 +40,8 @@ function initializeGamingTab() {
   gameFrame = document.getElementsByTagName('iframe')[0];
   gameName = new URLSearchParams(window.location.search).get('game')
 
-  if (['Maximum-Lazer'].includes(gameName)) {
-    document.getElementById('awayText').innerHTML = gameName.replace('-', ' ');
+  if (['Maximum-Lazer', 'Grab-The-Fruits'].includes(gameName)) {
+    document.getElementById('awayText').innerHTML = gameName.split('').map(c => c === '-' ? ' ' : c).reduce((p, c) => p + c);
   }
 
   gameFrame.setAttribute('src', `godot-games/${gameName}/${gameName}.html`)

@@ -2204,7 +2204,7 @@ main {
   display: block;
   align-content: center;
   background: linear-gradient(0.27turn, var(--svhs-green), #042618 12.5%, #0f1f06 31.4%, #2340089e 57.5%, #8f9d002b 85.3%, var(--svhs-green) 106%, var(--svhs-green));
-  border-bottom: 3px solid var(--svhs-gold);
+  border-bottom: 0.4rem solid #926408;
   font-weight: 350;
   color: var(--svhs-gold);
   text-align: center;
@@ -2220,7 +2220,7 @@ main {
   display: block;
   align-content: center;
   background: linear-gradient(0.27turn, var(--svhs-green), #042618 12.5%, #0f1f06 31.4%, #2340089e 57.5%, #8f9d002b 85.3%, var(--svhs-green) 106%, var(--svhs-green));
-  border-bottom: 3px solid var(--svhs-gold);
+  border-bottom: 0.2rem solid #926408;
   font-weight: 350;
   color: var(--svhs-gold);
   text-align: center;
