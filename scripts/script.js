@@ -45,6 +45,9 @@ function initializeGamingTab() {
   }
 
   gameFrame.setAttribute('src', `godot-games/${gameName}/${gameName}.html`)
+  if (gameName == 'Grab-The-Fruits') {
+  gameFrame.setAttribute('src', `godot-games/${gameName}/Grab the Fruits.html`)
+  }
   document.title = `${gameName.replace('-', ' ')} - SVHS Godot Portfolio`
 
   // auto-sizes the godot iframe to fill up the page
