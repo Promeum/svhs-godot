@@ -40,15 +40,46 @@ function initializeGamingTab() {
   gameFrame = document.getElementsByTagName('iframe')[0];
   gameName = new URLSearchParams(window.location.search).get('game')
 
-  if (['Maximum-Lazer', 'Grab-The-Fruits'].includes(gameName)) {
+  if ([
+       'Chicken-Runner',
+       'Eclipse-II-The-Darkest-Day',
+       'Find-The-Sauce',
+       'Ghosties-Bane',
+       'Grab-the-Fruits',
+       'Mob-Destroyer',
+       'Maximum-Lazer',
+       'Viking-Raider-Game'
+      ].includes(gameName)) {
     document.getElementById('awayText').innerHTML = gameName.split('').map(c => c === '-' ? ' ' : c).reduce((p, c) => p + c);
-  }
+    document.title = `${gameName.split('').map(c => c === '-' ? ' ' : c).reduce((p, c) => p + c)} - SVHS Godot Portfolio`;
 
-  gameFrame.setAttribute('src', `godot-games/${gameName}/${gameName}.html`)
-  if (gameName == 'Grab-The-Fruits') {
-  gameFrame.setAttribute('src', `godot-games/${gameName}/Grab the Fruits.html`)
+    switch (gameName) {
+      case 'Chicken-Runner':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/Chicken Runner.html`)
+        break;
+      case 'Eclipse-II-The-Darkest-Day':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/index.html`)
+        break;
+      case 'Find-The-Sauce':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/GodotDynamicDialog.html`)
+        break;
+      case 'Ghosties-Bane':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/Ghosties Bane.html`)
+        break;
+      case 'Grab-the-Fruits':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/Grab the Fruits.html`)
+        break;
+      case 'Maximum-Lazer':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/${gameName}.html`)
+        break;
+      case 'Mob-Destroyer':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/New Game Project.html`)
+        break;
+      case 'Viking-Raider-Game':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/VikingRaiderGameLTS1.html`)
+        break;
+    }
   }
-  document.title = `${gameName.replace('-', ' ')} - SVHS Godot Portfolio`
 
   // auto-sizes the godot iframe to fill up the page
   window.addEventListener("resize", function(e) {
