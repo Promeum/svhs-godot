@@ -2239,13 +2239,31 @@ main {
   overflow-y: hidden;
   transform: rotate(180deg);
 }
+#disclaimer {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.2rem;
+  background-color: royalblue;
+  padding-block: 0.7rem;
+}
 #homeText {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   margin-left: auto;
   color: #dcdcdc;
 }
 #homeText:hover {
   text-decoration: none;
   font-weight: 400;
+}
+#homeText * {
+  padding-inline-start: 0.35rem;
+  height: 1.6rem;
 }
 nav {
   top: 0px;
@@ -2281,6 +2299,7 @@ main * {
   color: white;
   text-align: left;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .godotUnit * {
   color: white;

@@ -41,7 +41,9 @@ function initializeGamingTab() {
   gameName = new URLSearchParams(window.location.search).get('game')
 
   if ([
+       'Angry-Animals',
        'Chicken-Runner',
+       'Dark-World',
        'Eclipse-II-The-Darkest-Day',
        'Find-The-Sauce',
        'Ghosties-Bane',
@@ -54,8 +56,14 @@ function initializeGamingTab() {
     document.title = `${gameName.split('').map(c => c === '-' ? ' ' : c).reduce((p, c) => p + c)} - SVHS Godot Portfolio`;
 
     switch (gameName) {
+      case 'Angry-Animals':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/${gameName}.html`)
+        break;
       case 'Chicken-Runner':
         gameFrame.setAttribute('src', `godot-games/${gameName}/Chicken Runner.html`)
+        break;
+      case 'Dark-World':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/RPG (New).html`)
         break;
       case 'Eclipse-II-The-Darkest-Day':
         gameFrame.setAttribute('src', `godot-games/${gameName}/index.html`)
@@ -76,7 +84,7 @@ function initializeGamingTab() {
         gameFrame.setAttribute('src', `godot-games/${gameName}/New Game Project.html`)
         break;
       case 'Viking-Raider-Game':
-        gameFrame.setAttribute('src', `godot-games/${gameName}/VikingRaiderGameLTS1.html`)
+        gameFrame.setAttribute('src', `godot-games/${gameName}/VikingRaiderGameLTS1_1.html`)
         break;
     }
   }
