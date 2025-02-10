@@ -47,7 +47,7 @@ function initializeGamingTab() {
        'Eclipse-II-The-Darkest-Day',
        'Find-The-Sauce',
        'Ghosties-Bane',
-       'Grab-the-Fruits',
+       'Grab-The-Fruits',
        'Mob-Destroyer',
        'Maximum-Lazer',
        'Viking-Raider-Game'
@@ -74,7 +74,7 @@ function initializeGamingTab() {
       case 'Ghosties-Bane':
         gameFrame.setAttribute('src', `godot-games/${gameName}/Ghosties Bane.html`)
         break;
-      case 'Grab-the-Fruits':
+      case 'Grab-The-Fruits':
         gameFrame.setAttribute('src', `godot-games/${gameName}/Grab the Fruits.html`)
         break;
       case 'Maximum-Lazer':
