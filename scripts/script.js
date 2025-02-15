@@ -44,6 +44,7 @@ function initializeGamingTab() {
        'Angry-Animals',
        'Chicken-Runner',
        'Dark-World',
+       'Dotter-Man',
        'Eclipse-II-The-Darkest-Day',
        'Find-The-Sauce',
        'Ghosties-Bane',
@@ -64,6 +65,9 @@ function initializeGamingTab() {
         break;
       case 'Dark-World':
         gameFrame.setAttribute('src', `godot-games/${gameName}/RPG (New).html`)
+        break;
+      case 'Dotter-Man':
+        gameFrame.setAttribute('src', `godot-games/${gameName}/Dotter-Maner.html`)
         break;
       case 'Eclipse-II-The-Darkest-Day':
         gameFrame.setAttribute('src', `godot-games/${gameName}/index.html`)
