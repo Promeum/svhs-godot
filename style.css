@@ -241,3 +241,9 @@ footer p {
   left: 50%;
   margin-left: -80px;
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
