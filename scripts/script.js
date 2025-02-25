@@ -43,7 +43,7 @@ function initializeGamingTab() {
   if ([
        'Angry-Animals',
        'Chicken-Runner',
-       'Dark-World',
+       //'Dark-World',
        'Dotter-Man',
        'Eclipse-II-The-Darkest-Day',
        'Find-The-Sauce',
