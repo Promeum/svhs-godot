@@ -63,9 +63,9 @@ function initializeGamingTab() {
       case 'Chicken-Runner':
         gameFrame.setAttribute('src', `godot-games/${gameName}/Chicken Runner.html`)
         break;
-      case 'Dark-World':
-        gameFrame.setAttribute('src', `godot-games/${gameName}/RPG (New).html`)
-        break;
+      //case 'Dark-World':
+        //gameFrame.setAttribute('src', `godot-games/${gameName}/RPG (New).html`)
+        //break;
       case 'Dotter-Man':
         gameFrame.setAttribute('src', `godot-games/${gameName}/Dotter-Maner.html`)
         break;
