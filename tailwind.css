@@ -2207,7 +2207,7 @@ main {
   border-bottom: 0.4rem solid #926408;
   font-weight: 350;
   color: var(--svhs-gold);
-  text-align: center;
+  /*text-align: center;*/
   font-size: 5rem;
   text-wrap: auto;
   line-height: 1.09em;
